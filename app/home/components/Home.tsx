@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChefHat } from "lucide-react";
 import VideoSections from "./VideoSections";
 import Link from "next/link";
-
+import { OurDishes } from ".";
 const Home = () => {
   return (
     <div className="px-10">
@@ -39,6 +39,7 @@ const Home = () => {
         </Button>
       </section>
       <VideoSections />
+      <OurDishes />
     </div>
   );
 };

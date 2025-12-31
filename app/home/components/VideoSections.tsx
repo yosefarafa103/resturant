@@ -5,7 +5,7 @@ const VideoSections = () => {
   return (
     <div className="sm:w-[85%] mx-auto my-10 relative group">
       <img
-        className="w-full sm:h-[calc(100svh-200px)] h-[50vh] object-cover rounded-lg"
+        className="w-full sm:h-[calc(100svh-200px)] h-[50vh] object-cover rounded-4xl"
         src={resutrantImg.src}
         alt=""
       />
