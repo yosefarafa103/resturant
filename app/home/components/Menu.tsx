@@ -3,7 +3,7 @@ import pizza from "@/public/assets/imgs/premium_vector-1730515692314-ba66a6869cc
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Store } from "lucide-react";
-type Menuu = "Burger" | "All Menu" | "Pizza" | ("Subway" & string);
+type Menuu = "Burger" | "All Menu" | "Pizza" | "Subway"& string
 const Menu = () => {
   const [selectedItem, setSelectedItem] = useState<Menuu>("All Menu");
   return (

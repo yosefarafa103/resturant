@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChefHat } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import VideoSections from "./VideoSections";
 import Link from "next/link";
-import { OurDishes } from ".";
+import { OurDishes, GallerySection } from ".";
 const Home = () => {
   return (
     <div className="px-10">
@@ -40,6 +40,7 @@ const Home = () => {
       </section>
       <VideoSections />
       <OurDishes />
+      <GallerySection />
     </div>
   );
 };
