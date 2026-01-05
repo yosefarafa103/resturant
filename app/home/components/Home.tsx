@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import VideoSections from "./VideoSections";
 import Link from "next/link";
 import { OurDishes, GallerySection } from ".";
+import Testemonials from "./Testemonials";
 const Home = () => {
   return (
     <div className="px-10">
@@ -41,6 +42,7 @@ const Home = () => {
       <VideoSections />
       <OurDishes />
       <GallerySection />
+      <Testemonials />
     </div>
   );
 };
