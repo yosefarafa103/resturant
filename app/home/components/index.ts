@@ -5,6 +5,9 @@ import Container from "./Container";
 import OurDishes from "./OurDishes";
 import Menu from "./Menu";
 import GallerySection from "./GallerySection";
+import CartDropdown from "./CartDropdown";
+import EditingForm from "./EditingForm";
+
 export {
     Header,
     Home,
@@ -12,5 +15,7 @@ export {
     SectionBrief,
     OurDishes,
     Menu,
-    GallerySection
+    GallerySection,
+    CartDropdown,
+    EditingForm
 }

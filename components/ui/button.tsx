@@ -22,6 +22,8 @@ const buttonVariants = cva(
         borderBlack:
           "border border-black text-white text-black hover:bg-black hover:text-[#fefae0]",
         orange: "bg-[#ff9e00] text-white",
+        restaurant:
+          "bg-orange-500  to-pink-500 text-white shadow-lg active:scale-95",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
@@ -36,7 +38,7 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
+  },
 );
 
 function Button({

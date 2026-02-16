@@ -3,23 +3,30 @@ import SectionBrief from "./SectionBrief";
 import Styles from "../styles/Testemonials.module.css";
 import { cn } from "@/lib/utils";
 import { testimonials, borderColors } from "@/data/rates";
+import { Button } from "@/components/ui/button";
 const Testemonials = () => {
   return (
-    <div>
+    <>
       <SectionBrief title="They Was Love Us" />
-      <div className={cn("wrapper overflow-x-hidden")}>
+      <div className={cn("overflow-x-hidden")}>
         <section
           className={cn(
-            Styles.wrapper,
-            "grid grid-flow-col auto-cols-[300px] gap-3 min-w-250"
+            // Styles.wrapper,
+            // "grid grid-flow-col auto-cols-[300px] gap-3 min-w-250"
+            "flex gap-2 max-md:flex-wrap"
           )}
         >
-          {testimonials.map((el) => (
+          {testimonials.slice(0, 4).map((el) => (
             <RateItem key={el.name + el.id + el.text} {...el} />
           ))}
         </section>
+        {testimonials.length > 3 ? (
+          <Button variant="orange" size={"lg"}>
+            See More Rates
+          </Button>
+        ) : null}
       </div>
-    </div>
+    </>
   );
 };
 
@@ -34,7 +41,7 @@ function RateItem({ name, text, username, color }: Props) {
   return (
     <div
       className={cn(
-        "flex flex-col p-5 rounded-lg border-b-4 my-4 min-w-50!",
+        "flex flex-col p-5 rounded-lg border-b-4 max-sm:my-4 my-2 min-w-50! w-full",
         `${
           color
             ? borderColors[color as keyof typeof borderColors]

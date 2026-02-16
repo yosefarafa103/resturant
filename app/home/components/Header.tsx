@@ -1,8 +1,10 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Eye, Store, TextAlignJustify, X } from "lucide-react";
+import { Building2, Eye, Store, TextAlignJustify, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { CartDropdown } from "../components";
+import ActiveHeaderLink from "./ActiveLink";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,17 +29,10 @@ const Header = () => {
         Unidine
       </Link>
       <NavLinks isOpen={isOpen} />
-      <div className="flex gap-2">
-        <Button
-          variant="borderBlack"
-          size="icon-lg"
-          className="rounded-full border border-black"
-          asChild
-        >
-          <Link href={{ pathname: "/store" }}>
-            <Store size={22} />
-          </Link>
-        </Button>
+      <div className="flex gap-1">
+        <ActiveHeaderLink path="/cart" Icon={Store} />
+        <ActiveHeaderLink path="/companies" Icon={Building2} />
+        <CartDropdown />
         <Button variant="borderBlack" asChild>
           <Link href={{ pathname: "/locations" }}>
             See Locations
