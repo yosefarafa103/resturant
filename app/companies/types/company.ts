@@ -50,4 +50,6 @@ export interface Branch {
     phone: string;
     hours: string;
     isOpen: boolean;
+    lat: number;
+    lng: number
 }

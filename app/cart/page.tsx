@@ -8,6 +8,7 @@ const Page = () => {
   return (
     <Container>
       {Object.keys(borderColors).map(() => (
+        // @ts-ignore
         <CartDropdown.CartItem />
       ))}
     </Container>

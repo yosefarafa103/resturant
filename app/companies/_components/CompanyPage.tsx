@@ -17,7 +17,7 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ company }) => {
   const params = useParams();
   return (
     <>
-      <SectionContainer className="min-h-[25vh] mt-5 sticky top-0 right-0 z-50">
+      <SectionContainer className="min-h-[25vh] mt-5 sticky top-0 right-0 z-2000">
         <div className="mx-auto pb-6 flex items-center gap-4 mr-7">
           <img
             src={company?.logo}

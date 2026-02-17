@@ -1,7 +1,7 @@
 import { Company } from "@/app/companies/types/company";
-import burger from "@/public/assets/imgs/burger.jpg"
-import drinks from "@/public/assets/imgs/kobby-mendez-xBFTjrMIC0c-unsplash.jpg"
-// kobby-mendez-xBFTjrMIC0c-unsplash.jpg
+import burger from "@/public/assets/imgs/burger.jpg";
+import drinks from "@/public/assets/imgs/kobby-mendez-xBFTjrMIC0c-unsplash.jpg";
+
 export const companies: Company[] = [
     {
         id: 1,
@@ -38,6 +38,8 @@ export const companies: Company[] = [
                 phone: "01000000001",
                 hours: "10 ص - 12 م",
                 isOpen: true,
+                lat: 30.0561,
+                lng: 31.3300,
             },
             {
                 id: 1002,
@@ -46,9 +48,10 @@ export const companies: Company[] = [
                 phone: "01000000002",
                 hours: "10 ص - 11 م",
                 isOpen: false,
+                lat: 29.9602,
+                lng: 31.2569,
             },
         ],
-
         meals: [
             {
                 id: 101,
@@ -65,7 +68,7 @@ export const companies: Company[] = [
                 available: false,
             },
         ],
-        categories: []
+        categories: [],
     },
 
     {
@@ -103,6 +106,8 @@ export const companies: Company[] = [
                 phone: "01000000003",
                 hours: "2 م - 2 ص",
                 isOpen: true,
+                lat: 30.0910,
+                lng: 31.3260,
             },
             {
                 id: 2002,
@@ -111,9 +116,10 @@ export const companies: Company[] = [
                 phone: "01000000004",
                 hours: "3 م - 1 ص",
                 isOpen: false,
+                lat: 29.9744,
+                lng: 30.9445,
             },
         ],
-
         meals: [
             {
                 id: 201,
@@ -155,7 +161,6 @@ export const companies: Company[] = [
                     },
                 ],
             },
-
             {
                 isActive: true,
                 id: 2,
@@ -180,21 +185,12 @@ export const companies: Company[] = [
                     },
                 ],
             },
-
             {
                 isActive: true,
                 id: 3,
                 name: "مشروبات",
                 slug: "drinks",
                 meals: [
-                    {
-                        id: 205,
-                        name: "كوكاكولا",
-                        price: 15,
-                        image: drinks,
-                        stock: 40,
-                        available: false,
-                    },
                     {
                         id: 205,
                         name: "كوكاكولا",

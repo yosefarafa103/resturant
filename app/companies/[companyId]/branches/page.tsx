@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { companies } from "@/data/companies";
 import { MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+import CompanyLocation from "../../_components/CompanyLocation";
 const page = async ({
   params,
 }: PageProps<"/companies/[companyId]/branches">) => {
@@ -45,6 +46,7 @@ const page = async ({
                 اتصال
               </Button>
             </div>
+            <CompanyLocation position={[branch.lat, branch.lng]} />
           </div>
         ))}
       </div>

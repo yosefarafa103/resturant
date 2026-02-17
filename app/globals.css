@@ -122,7 +122,9 @@
     @apply border-border outline-ring/50;
   }
 }
-
+.leaflet-control > * {
+  display: none;
+}
 body {
   direction: rtl;
   background: #fefae0;

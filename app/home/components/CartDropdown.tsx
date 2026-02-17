@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Order, orderList } from "@/data/orders";
+import { Order } from "@/data/orders";
 import { useLocaleStorage } from "@/hooks/useLocalStorage";
 import { cn } from "@/lib/utils";
 import { Check, Edit, Pizza, Timer, X } from "lucide-react";
@@ -43,7 +43,7 @@ const CartDropdown = () => {
   //         title: "Order 2",
   //         orderId: "asdasdasd12125",
   //       },
-  //     ])
+  //     ]),
   //   );
   // }, []);
   return (
@@ -58,7 +58,7 @@ const CartDropdown = () => {
           className={cn(
             !!parseInt(getItem("cart"))
               ? "absolute size-5 flex justify-center items-center bg-orange-400 rounded-2xl -top-2.5 -right-2"
-              : "hidden"
+              : "hidden",
           )}
         >
           {data?.cart}
@@ -112,29 +112,31 @@ function CartItem({
             <div
               className={cn(
                 isCanceled ? "bg-red-500" : isCompleted ? "bg-green-600" : "",
-                "px-3 py-1.5 rounded-lg text-white text-sm u"
+                "px-3 py-1.5 rounded-lg text-white text-sm u",
               )}
             >
               {isCanceled
                 ? "Canceled Order"
                 : isCompleted
-                ? "Completed Order"
-                : ""}
+                  ? "Completed Order"
+                  : ""}
             </div>
           </div>
-          <div className="flex items-center gap-1 justify-between">
+          <div className="flex items-center gap-1 justify-between ">
             <div className="flex flex-col gap-1">
               <span>{price} $</span>
               <div title={date?.toString()}>
                 <Timer />
               </div>
             </div>
-            <CartItemActions
-              isEdit={isEdit}
-              key={orderId}
-              setIsEdit={setIsEdit}
-              id={orderId}
-            />
+            {!isCanceled ? (
+              <CartItemActions
+                isEdit={isEdit}
+                key={orderId}
+                setIsEdit={setIsEdit}
+                id={orderId}
+              />
+            ) : null}
           </div>
         </>
       ) : (
