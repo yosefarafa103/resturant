@@ -20,8 +20,7 @@ const CartDropdown = () => {
     document.body.style.overflow = open ? "hidden" : "auto";
   }, [open]);
 
-  const { addItem: setData, getItem, data } = useLocaleStorage();
-  console.log("data: ", data["cartList"]);
+  const { getItem, data } = useLocaleStorage();
 
   // useEffect(() => {
   //   localStorage.setItem(
@@ -51,7 +50,7 @@ const CartDropdown = () => {
       <Button
         onClick={() => setOpen(!open)}
         variant="borderBlack"
-        size="icon-lg"
+        size="icon-sm"
         className="rounded-full"
       >
         <span
@@ -104,7 +103,7 @@ function CartItem({
   const [isEdit, setIsEdit] = useState(false);
 
   return (
-    <section className="flex flex-col gap-1 border border-2 border-black rounded-sm p-2 mt-1 mx-1">
+    <section className="flex flex-col gap-1 border-2 border-black rounded-sm p-2 mt-1 mx-1">
       {!isEdit ? (
         <>
           <div className="flex justify-between items-center">

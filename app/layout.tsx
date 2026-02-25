@@ -6,6 +6,8 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+import "swiper/css";
+import "swiper/css/navigation";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",

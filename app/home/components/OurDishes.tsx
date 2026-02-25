@@ -1,6 +1,7 @@
 import sticker from "@/public/assets/imgs/word-awesome-with-cloud-explosion-background-KE6REH-removebg-preview.png";
 import { SectionBrief, Menu } from "../components";
 import Image from "next/image";
+import FoodMenuSection from "./FoodMenuSection";
 const OurDishes = () => {
   return (
     <>
@@ -12,6 +13,7 @@ const OurDishes = () => {
         alt="sticker"
       />
       <SectionBrief title="Our Signature Dishes" />
+      {/* <FoodMenuSection /> */}
       <Menu />
     </>
   );

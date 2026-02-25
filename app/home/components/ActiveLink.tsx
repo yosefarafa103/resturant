@@ -15,8 +15,9 @@ interface Props {
   Icon: ForwardRefExoticComponent<
     Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
   >;
+  iconSize: "icon-sm" | "icon-lg";
 }
-const ActiveHeaderLink = ({ Icon, path }: Props) => {
+const ActiveHeaderLink = ({ Icon, path, iconSize = "icon-lg" }: Props) => {
   const pathname = usePathname();
   const [isActiveLink, setIsActiveLink] = useState<boolean>(false);
   useEffect(() => {
@@ -26,7 +27,7 @@ const ActiveHeaderLink = ({ Icon, path }: Props) => {
   return (
     <Button
       variant="borderBlack"
-      size="icon-lg"
+      size={iconSize}
       className={cn(
         "rounded-full border border-black",
         isActiveLink ? "bg-black text-white" : "",
