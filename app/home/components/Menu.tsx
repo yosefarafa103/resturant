@@ -60,7 +60,9 @@ const Menu = () => {
               </h4>
               <Button variant="orange">عرض المزيد</Button>
             </section>
-            <Swiper className="mySwiper mt-5">
+            <Swiper
+              className="mySwiper mt-5"
+            >
               {food.map((el) => (
                 <SwiperSlide className="w-fit! mx-2">
                   <>

@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import {
   Building2,
-  Eye,
   LocateIcon,
   Store,
   TextAlignJustify,
@@ -38,9 +37,17 @@ const Header = () => {
       <NavLinks isOpen={isOpen} />
       <div className="flex gap-1">
         <ActiveHeaderLink iconSize="icon-sm" path="/cart" Icon={Store} />
-        <ActiveHeaderLink iconSize="icon-sm" path="/companies" Icon={Building2} />
+        <ActiveHeaderLink
+          iconSize="icon-sm"
+          path="/companies"
+          Icon={Building2}
+        />
         <CartDropdown />
-        <ActiveHeaderLink iconSize="icon-sm" path="/locations" Icon={LocateIcon} />
+        <ActiveHeaderLink
+          iconSize="icon-sm"
+          path="/locations"
+          Icon={LocateIcon}
+        />
 
         <Button
           onClick={() => setIsOpen(!isOpen)}

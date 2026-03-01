@@ -5,7 +5,7 @@ import Link from "next/link";
 import { platformNavigation } from "../_constants";
 import { Company } from "../types/company";
 import { Button } from "@/components/ui/button";
-import { TextAlignJustify, X } from "lucide-react";
+import { TextAlignJustify, Utensils, X } from "lucide-react";
 import { useParams } from "next/navigation";
 import SectionContainer from "@/components/SectionContainer";
 
@@ -15,6 +15,7 @@ interface CompanyPageProps {
 const CompanyPage: React.FC<CompanyPageProps> = ({ company }) => {
   const [isOpen, setIsOpen] = useState(false);
   const params = useParams();
+  const isAuthed = true;
   return (
     <>
       <SectionContainer className="min-h-[25vh] mt-5 sticky top-0 right-0 z-2000">
@@ -24,7 +25,6 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ company }) => {
             alt={company?.name}
             className="w-20 h-20 object-contain rounded-full border-2"
           />
-
           <div>
             <h1 className="text-2xl font-bold">{company?.name}</h1>
             <p className="text-sm text-gray-500">{company.description}</p>
@@ -77,6 +77,14 @@ const CompanyPage: React.FC<CompanyPageProps> = ({ company }) => {
             </div>
           )}
         </div>
+        {isAuthed ? (
+          <Button variant="restaurant" className="mt-4 gap-3" asChild>
+            <Link href={`/dashboard/tenents/${company.id}`}>
+              اداره مطعمك
+              <Utensils />
+            </Link>
+          </Button>
+        ) : null}
       </SectionContainer>
     </>
   );

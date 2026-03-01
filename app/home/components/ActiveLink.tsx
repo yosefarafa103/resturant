@@ -15,7 +15,7 @@ interface Props {
   Icon: ForwardRefExoticComponent<
     Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
   >;
-  iconSize: "icon-sm" | "icon-lg";
+  iconSize?: "icon-sm" | "icon-lg";
 }
 const ActiveHeaderLink = ({ Icon, path, iconSize = "icon-lg" }: Props) => {
   const pathname = usePathname();
